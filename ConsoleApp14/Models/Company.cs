@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NTierApp.DAL.Entities
+namespace ConsoleApp14.Models
 {
     public class Company
     {
@@ -15,8 +15,6 @@ namespace NTierApp.DAL.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-
-        
+        public ICollection<Employee> Employees { get; set; }        
     }
 }

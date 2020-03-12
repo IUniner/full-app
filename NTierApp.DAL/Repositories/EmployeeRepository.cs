@@ -1,13 +1,12 @@
-﻿using NTierApp.DAL.Interfaces;
+﻿using NTierApp.DAL.Entities;
+using NTierApp.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NTierApp.DAL.Repositories
 {
-    class EmployeeRepository:IRepository<Employee>
+    class EmployeeRepository : IRepository<Employee>
     {
         private readonly DatabaseContext db;
 
@@ -15,15 +14,29 @@ namespace NTierApp.DAL.Repositories
         {
             this.db = context;
         }
-
-        public void Create(EmployeeRepository item)
+        public void Create(Employee item)
         {
             db.Employees.Add(item);
         }
 
-        public void Delete(EmployeeRepository item)
+        public void Delete(int id)
         {
-            db.Employees.Remove(item);
+            throw new NotImplementedException();
+        }
+
+        public Employee Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Employee> GetAll()
+        {
+            return db.Employees.ToList();
+        }
+
+        public void Update(Employee item)
+        {
+            throw new NotImplementedException();
         }
     }
 }

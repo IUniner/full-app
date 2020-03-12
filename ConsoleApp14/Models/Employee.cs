@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NTierApp.DAL.Entities
+namespace ConsoleApp14.Models
 {
     public class Employee
     {
